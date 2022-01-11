@@ -1,0 +1,375 @@
+/*reset*/
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: roboto, arial;
+	font-size: 100%;
+	/*isso fara com que as imagens fiquem dentro da borda, sem extrapolar*/
+	box-sizing: border-box;
+	text-align: center /*depois do clearfix aula 10/09*/
+}
+
+
+p{
+	padding:5px;
+	text-align: left
+}
+
+h1{
+	padding:5px;
+}
+
+/*criando a classe tituloDestaque no html e formatando no CSS*/
+.tituloDestaque{
+	font-size: 1.5em;
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom:15px; /*espacamento interno*/
+	margin-bottom:20px;/**espacamento externo*/
+	border-bottom:5px #ccc dotted;
+}
+/*fim aula 1*/
+/*aula dois: adicionar um topo e uma logomarca*/
+
+/*Formatar as classes corpo, conteudo e logo...*/
+
+.corpo{
+	width:100%;
+
+}
+
+/*a classe conteudo vai servir para centralizar nosso site com uma margem de 10% de cada lado*/
+.conteudo{
+	max-width: 1280px;
+	width:80%;
+	/*background: gray; so pra checar*/
+	margin:auto;
+	padding:5px;
+}
+.logo{
+	float: left;
+	width:200px;
+	height:150px;
+}
+
+
+/*cores*/
+.verde{
+	background-color: #609E1B;
+	color: #fff
+	
+}
+
+
+/*mostra como um bloco como o paragrafo 
+com espacos acima e a baixo e nao 
+permite outros elementos html ao lado*/
+	
+.menu{
+	display: block;
+	float: right;
+	margin-top: 40px;
+	background-color: #00ff00	
+}
+
+.menu li{
+	padding:20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	/*coloca lado a lado os elementos do menu*/ 
+	display: inline-block;
+
+}
+.menu li:hover{
+	/*cor de fundo ao passar o mouse*/
+	background-color: rgb(40,205,40);
+	border-radius: 10px
+}
+.menu a{
+	/*transparencia na leta*/
+	color: rgba(255,255,255,.9)
+}
+.menu a:hover{
+	
+	/*ao passar o mouse fica preto*/
+	color: #000000;
+}
+
+img{
+	/*isso fara com que as imagens fiquem do mesmo tamamho*/
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding: 5px;
+}
+.preto{
+	background-color: #333;
+	color: #ccc
+
+}
+/*slide de imagens:*/
+.slide{
+	/*definimos uma largura minima para o slide*/
+	min-height: 350px;
+	/*cor da borda branca com 5px*/
+	border: 5px solid #fff;
+	/*os positions precisam de um ponto para iniciar o 
+	calculo da coordenada parapoder posicionar o elemento
+	na tela.Position relative posiciona o elemento em relacao a si mesmo
+	Ou seja, o ponto zero sera o canto superior esquerdo 
+	e ele comecara a contar a partir dai*/
+	position: relative;
+	text-align: left;
+}
+.slideImagem{
+	/*absolute: utiliza o canto superior esquerdo de outros elementos
+	isso fara com que as imagens fiquem uma em cima da outra*/
+	position:absolute;
+	/*por padrao as imagens nao sao exibidas*/
+	opacity: 0;
+	/*definindo a duracao da animacao em 15 segundos*/
+	animation: animaSlide 15s infinite;
+	-webkit-animation: animaSlide 15s infinite;
+}
+
+
+/*Os keyframes sao responsaveis pela animacao
+	aos 25% do tempo de 15 segundos, a opacidade 1 fara 
+	o slide aparecer, depois perto dos 15s ela volta a sumir
+*/	
+@keyframes animaSlide{
+	25%{
+		opacity: 1
+	}
+	/*
+	50%{
+		width:5%;
+		background-color: red
+	}
+	*/
+	75%{
+		opacity: 0
+	}
+}
+
+@-webkit-keyframes animaSlide{
+	25%{
+		opacity: 1
+	}
+	75%{
+		opacity: 0
+	}
+}
+
+/*O hover, que ja usamos é uma pseudo classe
+agora vamos usar outra pseudo-classe, a nth-child
+Essa pseudo classe escolhe elementos dentro de um 
+conjunto de imagens, atravez de um indice que comeca
+com o zero.
+*/
+
+/*do comeco ate os 5 segundos, mostra o primeiro slide (0)*/
+.slideImagem:nth-child(0){
+	animation-delay: 5s
+}
+/*dos 6 aos 10 segundos, mostra o segundo slide*/
+.slideImagem:nth-child(1){
+	animation-delay: 10s
+}
+/*por fim os ultimos 5 segundos*/
+.slideImagem:nth-child(2){
+	animation-delay: 15s
+}
+
+/*arredondando as bordas dos menus*/
+.bordas{
+	border-radius: 10px;
+}
+
+.sombraMenu{
+	box-shadow: 2px 5px 10px #555;
+}
+/*mudei a sombra para colocar no section. Depois temos de criar a sombra do menu*/
+.sombra{
+	box-shadow: 2px 5px 10px #ccc;
+	border:1px solid #ddd;
+	-webkit-box-shadow:2px 5px 10px #ccc;
+	-moz-box-shadow:2px 5px 10px #ccc;
+}
+
+/*Caixas vamos criar 4 caixas para as fotos dos cachorros. Um grid pode conter ate
+12 caixas. No nosso exemplo, vamos criar 4 caixas, entao vou criar uma classe chamada
+caixa3, porque 3 vezes 4 = 12 que é o numero maximo de caixas que o html comporta*/
+.caixa{
+	float:left;
+	width:100%;
+	margin:0.5% /* aqui a margem vai ficar meio porcento de cada lado o que da 1% */
+}
+.caixa3{
+	width:24%;/*24% mais 1% da 25% que vezes 4 da 100%*/
+}
+/*2 caixas de 49% mais 1%  = 100%. Por isso chamei de caixa6, porque 6x2 = 12 que é o maximo de caixas*/
+.caixa6{
+	width: 49% /*vai caber 2 caixas*/
+}
+
+.caixa9{
+	width: 74% /*vai caber uma caixa9 e uma caixa3 (9+3=12)*/
+}
+
+.caixa1{
+	width:7.33333% /*vai caber 12 caixas* (12*1=12)*/
+}
+.caixa2{
+	width: 15.66667%; /*vai caber 6 caixas (6*2=12)*/
+}
+
+.titulo{
+	text-transform: uppercase;
+	font-size: 1.3em;
+}
+.textoVermelho{
+	color: #eb262a
+}
+.textoAzul{
+	color: #0089fa
+}
+.textoAmarelo{
+	color: #ffa900
+}
+.textoVerde{
+	color:#00c161;
+}
+
+.botao{
+	margin: 10px;
+	display:inline-block;
+	border: 1px solid;
+	color:#fff;
+	cursor:pointer;
+}
+.botaoMedio{
+	padding: 10px 30px /*altura e largura*/
+}
+.botaoGrande{
+	padding: 15px 50px
+}
+.botaoAmarelo{
+	background-color: #ffa900;
+	border-color: #ec9f00
+}
+.botaoAmarelo:hover{
+	background-color: #ffde37
+}
+.botaoAzul{
+	background-color: #0089fa;
+	border-color: #0082ec
+}
+.botaoAzul:hover{
+	background-color: #51d0ff
+}
+.botaoVerde{
+	background-color: #00a573;
+	border-color: #009d4f
+}
+.botaoVerde:hover{
+	background-color: #00c161
+}
+.botaoVermelho{
+	background-color: #eb260a;
+	border-color: #d2230a;
+}
+.botaoVermelho:hover{
+	background-color: #F08080
+}
+.sombraTexto{
+	text-shadow : 2px 2px 4px darkgrey
+}
+
+
+/*aula 11/09  */
+
+
+.clearfix{
+	clear: both;
+	overflow: hidden;
+	display: block;
+}
+
+.fundoTopo{
+	background-image: url("../imagens/topo.png");
+	background-repeat: repeat;*/
+
+	/*background-image: url(../imagens/facebook.png);/*coloca a imagem repetindo para caber*/
+	/*background-repeat: repeat-x;/*repete na horizontal*/
+
+	/*background-repeat: repeat-y;/*repete na vertical*/
+	/*background-repeat: space;/*completa o espaco*/
+	/*background-attachment: fixed; /*imagem fica fixa dentro da div*/
+	/*background-repeat: scroll;/*imagem rola junto... padrao*/
+	/*background-repeat: no-repeat;/*imagem nao repete*/
+	/*background-position: 30% 10%; /*posicao fixa na coordenada dentro da div*/
+	/*background-position: top center; /*centraliza no topo*/
+	/*background-size: 20%; /*defino o tamanho em porcentagem*/
+	/*background-size: 200px 100px /*defino o tamanho em pixels*/
+
+}
+
+video, iframe{
+	width: 100%;
+	height: 100%
+	min-height:180px;
+	background-color: #000;
+	border:5px solid #111;
+}
+
+.audios li{
+	list-style: none;
+	background-color: #333
+}
+
+.audios p{
+	text-transform: capitalize;
+	color: #ffde37;
+	border-bottom: 5px dashed #111;
+	text-align: center
+}
+
+audio{
+	width: 85%;
+	margin: 15px;
+	max-height: 35px
+}
+.endereco li, address{
+	line-height: 50px;
+	font-style: italic;
+	border-bottom: 1px #eee solid;
+	list-style: none;
+	text-align: left
+}
+.endereco img{
+	float:left;
+	width: 40px;
+	height: 40px;
+	margin: 5px
+}
+.endereco a{
+	color:#444
+}
+.endereco a:hover{
+	color: #ccc
+}
+
+.formulario{
+	background-color: #E9C2A6
+}
+
+input[type="text"],[type="email"], textarea{
+	margin: 1%;
+	width: 90%;
+	padding: 15px;
+	background-color: #e9e9e9;
+	border: 1px solid #ddd;
+	text-align: left
+}

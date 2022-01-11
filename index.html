@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang ="pt-br">
+<head>
+	<title>Bem vindo ao meu Site</title>
+	<!-- definindo o formato dos acentos em portugues -->
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="./css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="./css/animate.css">
+	
+</head>
+<body>
+	<div class = "corpo verde  fundoTopo">
+		<header class = "conteudo  clearfix" ><!-- A classe conteudo serve para deixar o conteudo do site centralizado com uma margem de cada lado-->
+			<a href="index.html">
+				<img src="imagens/logo.png" title = "Mostra o conteudo da imagem" alt = "Se a imagem demorar para carregar" class ="logo animated infinite pulse"/>
+			</a>
+			<nav class="menu bordas sombraMenu">
+				<ul>
+					<li><a href="index.html" title = "Home" target="_blank">Home</a></li>
+					<li><a href="#">Adoção</a></li>
+					<li><a href="#">Videos</a></li>
+					<li><a href="#">Fale Conosco</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+	<div class="corpo preto">
+		<div class="conteudo">
+			<div class="slide">
+				<img src="imagens/slide1.jpg" alt = "imagem 1" title="imagem 1" class="slideImagem">	
+				<img src="imagens/slide2.jpg" alt = "imagem 2" title="imagem 2" class="slideImagem">	
+				<img src="imagens/slide3.jpg" alt = "imagem 3" title="imagem 3" class="slideImagem">	
+			</div>			
+		</div>
+	</div>
+
+	<!-- vamos criar uma classe section para agrupar todos os elementos que tenham algo em comum
+	 e vamos colocar nosso h1 e um paragrafo dentro dela. Percebam que agora o paragrafo vai ficar centralizado e com um espaco a direita e a esquerda. Para ver melhor podemos colocar uma cor 
+	 na section e uma no conteudo
+
+	 A section serve para colocar conteudo relacionado.
+
+	<!--Todo section tem que ter um h1 como titulo principal -->
+	<section class="corpo clearfix">
+		<div class="conteudo">
+			<h1 class="tituloDestaque sombraTexto">Melhores amigos esperando por voces</h1>
+			<p>A presença de um animal de estimação em casa traz <strong>felicidade e bem estar</strong>.Bolinhas de pelo alegres, 	fofinhas e cheias de vida, grandes, pequenas, brancas, pretas, marrons ou amarelas, pulam e brincam o dia todo como se fossem brinquedinhos com energia infinita.</p>
+
+			<!-- dentro do conteudo e abaixo do paragrafo nos vamos iniciar o article
+				e ele serve para conter assuntos relacionados de forma isolada-->
+				<!--Todo section tem que ter um h1 como titulo principal e como ja utilizamos o h1 dentro da section, vamos usar agora o h2 dentro do article-->
+			<article class="caixa caixa3 bordas sombra">
+				<img src="imagens/ted.jpg" alt="Ted" title="Ted" >
+				<h2 class="titulo textoVermelho bordas">Ted</h2>
+				<p>Dou-me bem com outros animais e sou um ótimo perfil para familias com criancas.</p>
+				<a href="#contato" title="Adote agorinha mesmo" class="botao botaoMedio botaoVermelho bordas sombra sombraTexto">Adotar</a>
+			</article>
+			<!--atualizamos e vemos que nossas imagens estao todas com tamanho 100% como definimos la no nosso css-->
+
+			<article class="caixa caixa3 bordas sombra">
+				<img src="imagens/zezinho.jpg" alt="Zezinho" title="Zezinho bordas" >
+				<h2 class="titulo textoAzul">Zezinho</h2>
+				<p>Eu tenho um comportamento calmo, sou muito brincalhão e bastante obediente</p>
+				<a href="#contato" title="Adote agorinha mesmo" class="botao botaoMedio botaoAzul bordas sombra sombraTexto">Adotar</a>
+			</article>
+			<article class="caixa caixa3 bordas sombra">
+				<img src="imagens/simba.jpg" alt="Simba" title="Simba">
+				<h2 class="titulo textoAmarelo bordas">Simba</h2>
+				<p>Sou um leãozinho branco, sou bonitinho, carinhoso e amoroso, adoro receber carinho</p>
+				<a href="#contato" title="Adote agorinha mesmo" class="botao botaoMedio botaoAmarelo bordas sombra sombraTexto">Adotar</a>
+			</article>
+			<article class="caixa caixa3 bordas sombra">
+				<img src="imagens/pacoca.jpg" alt="Paçoca" title="Paçoca" >
+				<h2 class="titulo textoVerde bordas">Paçoca</h2>
+				<p>Tenho um bigodinho charmoso, sou muito companheiro e calmo, gosto muito de brincar.</p>
+				<a href="#contato" title="Adote agorinha mesmo" class="botao botaoMedio botaoVerde bordas sombra sombraTexto">Adotar</a>
+			</article>
+		</div>
+	</section>
+
+	<!-- sessão bichos exoticos criamos uma nova secao. Lembrando que section serve para agurupar
+		assuntos que tem algo em comum, e ela pode ter um header, um article e ate um footer-->
+	<section class="cinza clearfix">
+		<div class="conteudo">
+			<h1 class="tituloDestaque">Vídeos de animais exóticos (possíveis) para ter em casa</h1>
+			<p>Quem disse que são só os peludinhos, frufruzentos que podem ser adotados? Veja alguns animais que também podem ser ótimas opções para serem seus amigos de estimação.É claro que existe uma infinidade, mas abaixo você vai encontrar alguns comuns, dentre os exóticos, que você realmente pode ter em casa.</p>
+
+			<!-- grid cacatua -->
+			<article class="caixa caixa3">
+				<h2 class="titulo">Cacatua</h2>
+
+				<video controls >
+					Desculpe seu navegador não suporta esse formato de vídeo. Tente em outro navegador.					
+					<source src="uploads/videos/cacatua.mp4">
+				</video>
+
+				<p>Lindo psitacídeo nativo da Austrália e de otras partes do Pacífico. Chegam a 80cm de altura e peso de 2Kg. Estes animais podem viver mais de 70 anos. Precisam de atenção.</p>
+			</article>
+			<!-- grid sagui -->
+			<article class="caixa caixa3">
+				<h2 class="titulo">Saguí</h2>
+
+				<iframe src="https://player.vimeo.com/video/122438850" webkitallowfullscreen mozallowfullscreen allowfullscreen>					
+				</iframe>
+				<p>Um macaquinho que chega a 10 cm de altura, está na classe dos exóticos mais populares para se ter como pet. Animal que se desde pequeno é domesticado, vive numa boa com seu dono.</p>
+			</article>
+
+			<!-- grid coruja -->
+			<article class="caixa caixa3">
+				<h2 class="titulo">Coruja</h2>
+				<iframe src="https://www.youtube.com/embed/1OTlltSnM-w"  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+				<p>Existem várias espécies de coruja, símbolo de sabedoria, essa ave é um exelente animal de esstimação, pois elas são fiéis ao dono e apresentam um hábito muito tranquilo.</p>
+			</article>
+			<article class="caixa caixa3">
+				<h2 class="titulo"> Som dos animais</h2>
+				<ul class="audios">
+					<li>
+						<p>Cachorro latindo</p>
+						<audio controls src="uploads/audios/cachorro_latindo_alto.mp3"> 
+							Desculpe, seu navegador nao suporta esse tipo de audio!
+						</audio>
+					</li>
+					<li>
+						<p>Cachorro chorando</p>
+						<audio controls src="uploads/audios/cachorro_chorando.mp3"> 
+							Desculpe, seu navegador nao suporta esse tipo de audio!
+						</audio>
+					</li>
+					<li>
+						<p>Coruja fofa</p>
+						<audio controls src="uploads/audios/coruja.mp3"> 
+							Desculpe, seu navegador nao suporta esse tipo de audio!
+						</audio>
+					</li>
+				</ul>				
+			</article>
+		</div>
+	</section>
+	<section>
+		<div class="conteudo">
+			<div class="caixa caixa6">
+				<h1 class="tituloDestaque">Onde estamos</h1>
+				<ul class="endereco">
+					<li>
+						<img src="imagens/endereco.png" title="Endereço" alt="Endereço">
+						<address>Rua Nazir Miguel 790, CEP: 05570-030, São Paulo - SP</address>
+					</li>
+					<li>
+						<img src="imagens/telefone.png" title="Telefone" alt="Telefone">
+						<p>Telefone: (11)3782-5376</p>
+					</li>
+					<li>
+						<img src="imagens/email.png" title="Email" alt="Email">
+						<a href="mailto:fabioclaret@gmail.com">Email: fabioclaret.com.br</a>
+					</li>
+					<li>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.09433857286!2d-46.79267508493652!3d-23.60094938466321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5501c377b717%3A0x23876defbfaff5d!2sR.+Nazir+Miguel%2C+779+-+Jardim+Paulo+VI%2C+S%C3%A3o+Paulo+-+SP%2C+05570-030!5e0!3m2!1spt-BR!2sbr!4v1538176830101" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</li>
+				</ul>	
+			</div>
+			<div class="caixa caixa6">
+				<h1 class="tituloDestaque">fale conosco </h1>
+				<form class="formulario" action="" method="">
+					<input type="text" name="nome" placeholder="Digite o Nome">
+					<input type="email" name="email" placeholder="Digite o Email">
+					<textarea rows="5" name="mensagem" placeholder="Digite uma Mensagem"></textarea>
+					<input type="submit" name="enviar" value="Enviar mensagem" class="botao botaoMedio botaoAmarelo bordas">
+				</form>
+			</div>
+		</div>
+	</section>		
+	</body>
+
+</html>
